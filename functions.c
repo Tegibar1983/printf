@@ -184,8 +184,8 @@ for (r = 0, sum = 0, count = 0; r < 32; r++)
 sum += z[r];
 if (sum || r == 31)
 {
-char z = '0' + z[r];
-write(1, &z, 1);
+char a = '0' + z[r];
+write(1, &a, 1);
 count++;
 }
 }
