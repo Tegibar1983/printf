@@ -1,12 +1,5 @@
 #include "main.h"
 
-/**
- * get_size - function that estimate size to cast the argument
- * @format: Formatted string for arguments to be printed
- * @r: arguments counts to be printed
- * Return: Precision from the functons
- */
-
 int get_size(const char *format, int *r)
 
 {
