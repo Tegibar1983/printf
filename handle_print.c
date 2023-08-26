@@ -1,18 +1,5 @@
 #include "main.h"
 
-/**
-* handle_print - Function that prints arguments
-* @fmt: Formatted array of chars or string
-* @list: Parameter lists to be printed
-* @ind: ind function parameters
-* @buffer: Array of buffer that handle printing
-* @flags: Active flags calculator or estimator
-* @width: Parameter get width
-* @precision: Parameter for precision specifier
-* @size: Parameter for size specifier
-* Return: For sucess (1 or 2)
-*/
-
 int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 int flags, int width, int precision, int size)
 {
