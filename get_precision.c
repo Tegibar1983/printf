@@ -1,13 +1,5 @@
 #include "main.h"
 
-/**
-* get_precision - Function that calculates printing precision
-* @format: Pramater of arrays of chars
-* @r: Paramters or arguments to be printed
-* @list: Argumets lists or counts
-* Return: Printing precision levels
-*/
-
 int get_precision(const char *format, int *r, va_list list)
 {
 int curr_r = *r + 1;
