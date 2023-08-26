@@ -6,10 +6,6 @@
 /**
  * print_char - Prints charactors
  * @types: Count of arguments
- * @buffer: Print buffer array handlers
- * @flags:  Active flags estimator
- * @width: Width of specifier
- * @precision: Precision specifier files
  * @size: Size of specifiers in the file
  * Return: print charactor of chars to be printed
  */
@@ -19,22 +15,8 @@ int flags, int width, int precision, int size)
 {
 char x = va_arg(types, int);
 return (handle_write_char(x, buffer, flags, width, precision, size));
+
 }
-
-
-
-/*** Print string files ***/
-/**
- * print_string - Function that print strings
- * @types: Count of arguments
- * @buffer: Prints buffer arrays to be handled
- * @flags:  Active flags estimator
- * @width: Width calculator
- * @precision: Parameter that specifies Precision
- * @size: Parameter that specifies size
- * Return: List of charactors to be printed
- */
-
 
 int print_string(va_list types, char buffer[],
 int flags, int width, int precision, int size)
