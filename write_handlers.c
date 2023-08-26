@@ -1,18 +1,5 @@
 #include "main.h"
 
-/**** WRITE HANDLE ****/
-
-/**
-* handle_write_char - Function that prints charactor array
-* @c: charactor parameter
-* @buffer: Buffer array that handle print
-* @flags: Active flags calculator or estimator
-* @width: width argument or parameter
-* @precision: argument for precision specifier or parameter
-* @size: Size specifier parameter
-* Return: The number charactors to be printed
-*/
-
 int handle_write_char(char c, char buffer[],
 int flags, int width, int precision, int size)
 
@@ -41,20 +28,6 @@ write(1, &buffer[0], 1));
 }
 return (write(1, &buffer[0], 1));
 }
-
-/*** WRITE NUMBER ***/
-/**
-* write_number - Function that prints charactor array
-* @is_negative: parameter list
-* @ind: charactor argument type
-* @buffer: Buffer array that handles printing
-* @flags: Active flags calculator or estimator
-* @width: parameter or argument for get width
-* @precision: parameter for precision specifier argument
-* @size: parameter for size specifier argument
-* Return: Charactor counts to be printed
-*/
-
 int write_number(int is_negative, int ind, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -72,19 +45,6 @@ extra_ch = ' ';
 return (write_num(ind, buffer, flags, width, precision,
 length, padd, extra_ch));
 }
-
-/**
-* write_num - Function that can write nums by using bufffers
-* @ind: Num starter index
-* @buffer: Parameter arguments for buffer
-* @flags: Parameter flags count
-* @width: Parameter width count
-* @prec: Parameter precision specifier
-* @length: parameter length for the buffer
-* @padd: char padding parameter
-* @extra_c: additional charactor
-* Return: Charactors nums to be printed
-*/
 
 int write_num(int ind, char buffer[],
 int flags, int width, int prec,
@@ -149,18 +109,6 @@ buffer[--ind] = extra_c;
 return (write(1, &buffer[ind], length));
 }
 
-/**
-* write_unsgnd - Function that writes an unsigned nums
-* @is_negative: negative num indicator
-* @ind: Buffer num index
-* @buffer: strings or char arrays
-* @flags: Parameter that specifies Flags
-* @width: Parameter specifies width
-* @precision: Parameter that specifies precision
-* @size: Parameter that specifies size
-* Return: Charactor nums
-*/
-
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
 int flags, int width, int precision, int size)
@@ -195,33 +143,20 @@ buffer[r] = padd;
 buffer[r] = '\0';
 if (flags & F_MINUS)
 
-/*** Additional charactor assignment to the buffer left ***/
+/** Additional charactor assignment to the buffer left ***/
 
 {
 return (write(1, &buffer[ind], length) + write(1, &buffer[0], r));
 }
 
 else
-/*** additional charactor assignment to left of padding  ***/
+/** additional charactor assignment to left of padding  ***/
 {
 return (write(1, &buffer[0], r) + write(1, &buffer[ind], length));
 }
 }
 return (write(1, &buffer[ind], length));
 }
-
-/**
-* write_pointer - function that write variables memory address
-* @buffer: charactor arrays or strings
-* @ind: Buffer number index
-* @length: num length paramenter
-* @width: Parameter that specifies width
-* @flags: Parameter that specifies flags
-* @padd: parameter that specifies padding
-* @extra_c: Parameter that represents additional char
-* @padd_start: padding starter index
-* Return: charactor nums to be printed
-*/
 
 int write_pointer(char buffer[], int ind, int length,
 int width, int flags, char padd, char extra_c, int padd_start)
