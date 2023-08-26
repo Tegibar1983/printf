@@ -5,9 +5,8 @@
 #include <stdio.h>
 
 #define UNUSED(x) (void)(x)
-#define BUFF_SIZE 1024
-
-/*** Macro Flags starts with # define ***/
+#define BUFF_SIZE 10
+/** Macro Flags starts with # define ***/
 
 #define F_PLUS 2
 #define F_HASH 8
@@ -15,27 +14,16 @@
 #define F_MINUS 1
 #define F_SPACE 16
 
-/*** Buffer Sizes ***/
+/** Buffer Sizes ***/
 #define S_LONG 2
 #define S_SHORT 1
 
-/**
- * struct fmt - Struct format Op functions
- * @fmt: formatted charactor data type
- * @fn: function pointer
- */
 struct fmt
 {
 char fmt;
 int (*fn)(va_list, char[], int, int, int, int);
 };
 
-
-/**
- * typedef struct fmt fmt_t - The typedef OP Struct
- * @fmt: The formatted structure
- * @fm_t: formatted function
- */
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
